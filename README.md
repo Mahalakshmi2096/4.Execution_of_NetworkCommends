@@ -27,7 +27,7 @@ This commands includes
 <BR>
 
 ## PROGRAM:
-4a:
+
 CLIENT:
 
 ![image](https://github.com/user-attachments/assets/1ae4e48e-c160-423a-b799-ba1ec2f3e2a8)
@@ -45,12 +45,6 @@ CLIENT:
 SERVER:
 
 ![image](https://github.com/user-attachments/assets/9d1916fa-f0ab-4111-af06-de7bcfc296b6)
-
-## OUTPUT:
-4b:
-
-![image](https://github.com/user-attachments/assets/cfc56bc4-9c7d-47d4-ae32-b97b1b4a9fcb)
-
-
+ 
 ## Result
 Thus Execution of Network commands Performed 
