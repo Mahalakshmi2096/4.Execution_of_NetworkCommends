@@ -27,27 +27,51 @@ This commands includes
 <BR>
 
 ## PROGRAM:
-4a:
 CLIENT:
-
-![image](https://github.com/user-attachments/assets/1ae4e48e-c160-423a-b799-ba1ec2f3e2a8)
-
+```
+import socket
+s=socket.socket()
+s.connect(('localhost',8000)) 
+while True:
+    ip=input("Enter the website you want to ping ")
+    s.send(ip.encode())
+    print(s.recv(1024).decode())
+```
 SERVER:
-
-![image](https://github.com/user-attachments/assets/6418230a-4b39-4360-b182-a056710f3476)
+```
+import socket
+from pythonping
+import ping
+s=socket.socket()
+s.bind(('localhost'8000))
+s.listen(5) 
+c,addr=s.accept()
+while True:
+    hostname=c.recv(1024).decode() try:
+       c.send(str(ping(hostname, verbose=False)).encode())
+    except KeyError:
+       c.send("Not Found".encode())
+```
+TRACEROUTE COMMAND:
+```
+from scapy.all import*
+target = ["www.google.com"]
+result, unans = traceroute(target,maxttl=32)
+print(result,unans)
+```
 
 ## OUTPUT:
 
 CLIENT:
 
-![image](https://github.com/user-attachments/assets/a18161d6-4c29-4904-8c17-0e9c3ca3d0ea)
+<img width="953" height="565" alt="image" src="https://github.com/user-attachments/assets/2ef9f85a-c8fb-464e-9d71-b944503df91f" />
+
 
 SERVER:
 
-![image](https://github.com/user-attachments/assets/9d1916fa-f0ab-4111-af06-de7bcfc296b6)
+<img width="957" height="562" alt="image" src="https://github.com/user-attachments/assets/f1487202-7fbb-4f01-94a8-781a1449c106" />
 
-## OUTPUT:
-4b:
+TRACEROUTE COMMAND:
 
 ![image](https://github.com/user-attachments/assets/cfc56bc4-9c7d-47d4-ae32-b97b1b4a9fcb)
 
